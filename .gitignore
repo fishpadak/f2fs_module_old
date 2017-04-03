@@ -2,3 +2,4 @@
 *.lo
 *.ko
 *.cmd
+*.symvers
