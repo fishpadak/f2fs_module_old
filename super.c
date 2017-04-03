@@ -843,11 +843,9 @@ int f2fs_sync_fs(struct super_block *sb, int sync)
 
 		cpc.reason = __get_cp_reason(sbi);
 
-		printk(KERN_INFO "DYLee : f2fs_sync_fs begin\n");
 		mutex_lock(&sbi->gc_mutex);
 		err = write_checkpoint(sbi, &cpc);
 		mutex_unlock(&sbi->gc_mutex);
-		printk(KERN_INFO "DYLee : f2fs_sync_fs done\n");
 	}
 	f2fs_trace_ios(NULL, 1);
 

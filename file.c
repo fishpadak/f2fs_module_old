@@ -2217,15 +2217,15 @@ static int f2fs_ioc_forward_sync(struct file *filp, unsigned long arg)
 
 	static int dy_num = 0;
 
-	printk(KERN_INFO "DYLee : f2fs_ioc_forward_sync triggered");
+//	printk(KERN_INFO "DYLee : f2fs_ioc_forward_sync triggered");
 
 //	if (!capable(CAP_SYS_ADMIN)) {
 //		printk(KERN_INFO "DYLee : f2fs_ioc_forward_sync BUG #1");
 //		return -EPERM;
 //	}
 
-	if (!test_opt(sbi, FORCE_USER))
-		printk(KERN_INFO "DYLee : f2fs_ioc_forward_sync with no force_user");
+//	if (!test_opt(sbi, FORCE_USER))
+//		printk(KERN_INFO "DYLee : f2fs_ioc_forward_sync with no force_user");
 		
 
 	ret = mnt_want_write_file(filp);
@@ -2253,7 +2253,7 @@ static int f2fs_ioc_forward_sync(struct file *filp, unsigned long arg)
 	/* flush direct node blocks with ending fsync_mark */
 	err = sync_node_pages(sbi, &wbc, 2);
 	
-	printk(KERN_INFO "DYLee : f2fs_ioc_forward_sync exit normally, %dth success\n", ++dy_num);
+//	printk(KERN_INFO "DYLee : f2fs_ioc_forward_sync exit normally, %dth success\n", ++dy_num);
 out:
 	blk_finish_plug(&plug);
 	mnt_drop_write_file(filp);
