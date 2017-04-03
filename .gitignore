@@ -1,0 +1,6 @@
+*.o
+*.lo
+*.ko
+*.cmd
+*.symvers
+f2fs.mod
