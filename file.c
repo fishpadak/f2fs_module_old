@@ -1858,8 +1858,8 @@ static int f2fs_ioc_write_checkpoint(struct file *filp, unsigned long arg)
 	struct f2fs_sb_info *sbi = F2FS_I_SB(inode);
 	int ret;
 
-	if (!capable(CAP_SYS_ADMIN))
-		return -EPERM;
+//	if (!capable(CAP_SYS_ADMIN))
+//		return -EPERM;
 
 	if (f2fs_readonly(sbi->sb))
 		return -EROFS;

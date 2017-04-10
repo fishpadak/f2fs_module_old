@@ -357,4 +357,4 @@ __attribute__((section(".modinfo"))) =
 "depends=fscrypto";
 
 
-MODULE_INFO(srcversion, "5B9234847E329524B4EB2C5");
+MODULE_INFO(srcversion, "4845483BCC1108D92D9EAE3");
