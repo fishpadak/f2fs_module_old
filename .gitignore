@@ -4,3 +4,4 @@
 *.cmd
 *.symvers
 f2fs.mod
+f2fs.mod.c
